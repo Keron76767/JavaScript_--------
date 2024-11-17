@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+</head>
+<body>
+    Написать функцию, которая проверяет, что в строке, переданной в качестве аргумента, соблюдается баланс точек и заглавных букв. Функция возвращает строку "O'key" при соблюдении такого баланса, и "Error" в противном случае.
+<script>
+    let str = "Работа идёт. Не переживаёте.";
+    function check(str) {
+        let dot = 0; //объявление переменной по чеслу точек
+        let upper = 0; //объявление переменной по чеслу заглавных
+
+        for (let i = 0; i < str.lenght; i++) {
+            if (str[i] == '.'){
+                dot++;
+            } else if (str[i] == str[i].toUpperCase()){
+                upper++;
+            }
+        }
+
+        if (dot == upper){
+            return("O'key");
+        } else {
+            return("Error");
+        }
+    }
+    console.log(check(str));
+</script>    
+</body>
+</html>
